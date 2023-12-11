@@ -1,5 +1,4 @@
 const numbers = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-let sum = 0;
 let positiveNumCount = 0;
 let negativeNumCount = 0;
 let maxArrValue = 0;
@@ -9,11 +8,12 @@ let evenPositiveEl = 0;
 let sumEvenPositiveEl = 0;
 let sumOddPositiveEl = 0;
 let sumOnlyPositiveEl = 0;
+let productPositiveEl = 1;
 
 for (let i = 0;i < numbers.length; i++){
-    sum = sum + numbers[i]
                               
     if (numbers[i] > 0) {
+        productPositiveEl = productPositiveEl * numbers[i];
         sumOnlyPositiveEl = sumOnlyPositiveEl + numbers[i]; 
         positiveNumCount++;
     }
@@ -34,16 +34,16 @@ for (let i = 0;i < numbers.length; i++){
     }
 }
 
-alert(`Сума позитивних елементів : ${sum}
+console.log(`Сума позитивних елементів : ${sumOnlyPositiveEl}
 Kiлькiсть позитивних елементів: ${positiveNumCount}
 Максимальний елемент масиву : ${maxArrValue}
 Порядковий номер максимального елементу масиву : ${maxArrValueIndex}
 Кількість негативних елементів : ${negativeNumCount}
-Кількість непарних позитивних елементів $:${oddPositiveEl}
+Кількість непарних позитивних елементів :${oddPositiveEl}
 Кількість парних позитивних елементів : ${evenPositiveEl}
 Суму парних позитивних елементів : ${sumEvenPositiveEl}
 Суму непарних позитивних елементів : ${sumOddPositiveEl}
-Добуток позитивних елементів : ${sumOnlyPositiveEl}`
+Добуток позитивних елементів : ${productPositiveEl}`
     )
 
 
